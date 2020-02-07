@@ -20,8 +20,9 @@ app.listen(PORT, () => { console.log(`Listening on PORT: ${PORT}`); });
 
 app.get('/bottom', (req, res) => {
   console.log('Bottom Audio Player')
-  axios.get('http://13.56.50.57:3000/')
+  axios.get('http://13.56.50.57:3000/bundle.js')
     .then(response => {
+      console.log(response.data);
       res.send(response.data);
     })
     .catch(error => {
