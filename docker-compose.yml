@@ -2,6 +2,6 @@ version: '3'
 
 services:
   proxy:
-    build: service/
+    build: server/
     ports:
       - '1000:1000'
