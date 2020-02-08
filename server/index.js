@@ -37,3 +37,13 @@ app.get('/comments', (req, res) => {
       console.log(error);
     });
 });
+
+app.get('/api/comments', (req, res) => {
+  axios.get('http://18.144.144.76:3001/api/comments')
+    .then(response => {
+      res.send(response.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
