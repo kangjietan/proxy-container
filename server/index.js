@@ -27,3 +27,13 @@ app.get('/bottom', (req, res) => {
       console.log(error);
     });
 });
+
+app.get('/comments', (req, res) => {
+  axios.get('http://18.144.144.76:3001/bundle.js')
+    .then(response => {
+      res.send(response.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
